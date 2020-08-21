@@ -1,0 +1,48 @@
+.App {
+  > .Main {
+    display: flex;
+    > .left {
+      flex: 50%;
+      margin-left: 10%;
+      margin-top: 50px;
+      font-family: 'avenir';
+
+      > .top {
+        > h1 {
+          margin-top: 0;
+          font-weight: 500;
+          font-size: 40px;
+        }
+        > .BlueBirds {
+          width: 50px;
+          height: auto;
+          margin-left: 50px;
+          margin-bottom: 0px;
+          padding: 0;;
+        }
+      }
+
+      > .body {
+        margin-top: 50px;
+        > p {
+          font-size: 50px;
+          font-weight: 600;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        > .input {
+          display: inline-block;
+          margin-top: 20px,
+        }
+      }
+    }
+    > .right {
+      flex: 50%;
+      > .header {
+        float: right;
+        margin-right: 30px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
