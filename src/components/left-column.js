@@ -24,7 +24,7 @@ const numberField = makeStyles({
         fontFamily: "avenir",
         fontSize: "13px",
         color: "#000000",
-        borderRadius: "7px 0px 0px 7px",
+        borderRadius: "4px 0px 0px 4px",
         "&:hover .MuiOutlinedInput-notchedOutline": {
             borderColor: "#A3C4D3",
             color: "#436BA8"
@@ -44,7 +44,7 @@ const waitlistButton = makeStyles({
       height: "53px",
       textTransform: "none",
       width: "150px",
-      borderRadius: "0px 7px 7px 0px",
+      borderRadius: "0px 4px 4px 0px",
       "&:hover": {
         backgroundColor: "#A3C4D3",
         fontFamily: "avenir",
@@ -59,6 +59,7 @@ export const inputFields = makeStyles({
         borderColor: "#A3C4D3",
         marginTop: '20px',
         width: "400px",
+        borderRadius: '4px',
         "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
             borderColor: "#A3C4D3"
         },
