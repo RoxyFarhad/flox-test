@@ -30,6 +30,9 @@
           margin-top: 0;
           margin-bottom: 0;
         }
+        > p:last-of-type {
+          margin-bottom: 5px;
+        }
         > .input {
           display: inline-block;
           margin-top: 20px,

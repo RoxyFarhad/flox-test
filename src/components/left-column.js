@@ -7,31 +7,26 @@ import { makeStyles } from '@material-ui/core';
 const numberField = makeStyles({
     root: {
         fontFamily: 'avenir', 
-        borderColor: "#E6E6E6",
+        borderColor: "#A3C4D3",
         display: "inline-flex",
         width: "250px",
-        borderRadius: "0",
         "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
-            borderColor: "#E6E6E6"
-        },
-        "& label": {
-            color: "#3F51A2",
-            fontFamily: "avenir"
+            borderColor: "#A3C4D3"
         },
         "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#E6E6E6",
+            borderColor: "#A3C4D3",
         },
           "&:hover .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#E6E6E6",
+            borderColor: "#A3C4D3",
         },
     },
     input: {
         fontFamily: "avenir",
         fontSize: "13px",
         color: "#000000",
-        borderRadius: "0",
+        borderRadius: "7px 0px 0px 7px",
         "&:hover .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#E6E6E6",
+            borderColor: "#A3C4D3",
             color: "#436BA8"
         },
         "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
@@ -49,20 +44,57 @@ const waitlistButton = makeStyles({
       height: "53px",
       textTransform: "none",
       width: "150px",
-      borderRadius: "0",
+      borderRadius: "0px 7px 7px 0px",
       "&:hover": {
         backgroundColor: "#A3C4D3",
         fontFamily: "avenir",
         color: "white"  
-      }
+      },
     }
-  });
-  
-
+});
+ 
+export const inputFields = makeStyles({
+    root: {
+        fontFamily: 'avenir', 
+        borderColor: "#A3C4D3",
+        marginTop: '20px',
+        width: "400px",
+        "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
+            borderColor: "#A3C4D3"
+        },
+        "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#A3C4D3",
+        },
+          "&:hover .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#A3C4D3",
+        },
+        "& label": {
+            color: "#A3C4D3",
+            fontFamily: "avenir"
+          },
+          "&:hover label": {
+            color: "#A3C4D3"
+          },
+          "& label.Mui-focused": {
+            color: "#A3C4D3"
+          },
+    },
+    input: {
+        fontFamily: "avenir",
+        color: "#000000",
+        "&:hover .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#A3C4D3",
+        },
+        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#A3C4D3",
+            borderWidth: "2px",
+        }
+    }
+})
 export default function LeftColumn() {
     const numberStyles = numberField();
     const waitlistButtonStyles = waitlistButton();
-
+    const textStyles = inputFields();
     return (
         <div className="left"> 
             <div className="top"> 
@@ -71,7 +103,9 @@ export default function LeftColumn() {
             </div>
             <div className="body"> 
                 <p> Find new people </p>
-                <p> <i> with your </i>people </p>
+                <p> <i> with your </i>people. </p>
+                <div> <TextField label="Name" className={textStyles.root} InputProps={{ className: textStyles.input }} variant="outlined"/> </div>
+                <div> <TextField label="Email" className={textStyles.root} InputProps={{ className: textStyles.input }} variant="outlined"/> </div>
                 <span className="input"> 
                     <TextField 
                         className={numberStyles.root} 
