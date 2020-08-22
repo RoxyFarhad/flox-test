@@ -60,6 +60,7 @@ export const inputFields = makeStyles({
         marginTop: '20px',
         width: "400px",
         borderRadius: '4px',
+        fontSize: "13px",
         "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
             borderColor: "#A3C4D3"
         },
@@ -70,8 +71,8 @@ export const inputFields = makeStyles({
             borderColor: "#A3C4D3",
         },
         "& label": {
-            color: "#A3C4D3",
-            fontFamily: "avenir"
+            fontFamily: "avenir",
+            fontSize: "13px",
           },
           "&:hover label": {
             color: "#A3C4D3"
@@ -83,6 +84,7 @@ export const inputFields = makeStyles({
     input: {
         fontFamily: "avenir",
         color: "#000000",
+        fontSize: "13px",
         "&:hover .MuiOutlinedInput-notchedOutline": {
             borderColor: "#A3C4D3",
         },
