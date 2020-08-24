@@ -2,8 +2,8 @@
   > .Main {
     display: flex;
     > .left {
-      flex: 50%;
-      margin-left: 10%;
+      flex: 35%;
+      margin-left: 5%;
       margin-top: 50px;
       font-family: 'avenir';
 
@@ -14,9 +14,8 @@
           font-size: 40px;
         }
         > .BlueBirds {
-          width: 50px;
+          width: 15%;
           height: auto;
-          margin-left: 50px;
           margin-bottom: 0px;
           padding: 0;;
         }
@@ -40,11 +39,33 @@
       }
     }
     > .right {
-      flex: 50%;
+      flex: 65%;
       > .header {
         float: right;
         margin-right: 30px;
+        text-align: right;
         margin-top: 10px;
+      }
+      > .main {
+        display: flex;
+        margin-top: 25%;
+        margin-right: 20%;
+        > .iphoneImage {
+          flex: 50%;
+        }
+        > .changingText {
+          flex: 50%;
+          font-family: 'avenir';
+          font-weight: 500;
+          font-size: 25px;
+          > p {
+            text-align: right;
+            margin: 0;
+            > .blue {
+              color: blue;
+            }
+          }
+        }
       }
     }
   }

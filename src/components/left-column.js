@@ -1,8 +1,10 @@
 import React from 'react';
 import BlueBirds from 'logos/blue-birds.png'; 
+import FloxLogo from 'logos/new-flox-logo.png';
 import TextField from '@material-ui/core/TextField';
 import Button from "@material-ui/core/Button";
 import { makeStyles } from '@material-ui/core';
+import parse from 'html-react-parser';
 
 const numberField = makeStyles({
     root: {
@@ -41,7 +43,7 @@ const waitlistButton = makeStyles({
       backgroundColor: "#A3C4D3",
       fontFamily: "avenir",
       color: "white",
-      height: "53px",
+      height: "52.5px",
       textTransform: "none",
       width: "150px",
       borderRadius: "0px 4px 4px 0px",
@@ -101,8 +103,9 @@ export default function LeftColumn() {
     return (
         <div className="left"> 
             <div className="top"> 
-                <img src={BlueBirds} alt="" className="BlueBirds" />
-                <h1> flox </h1>
+                {/* <img src={BlueBirds} alt="" className="BlueBirds" />
+                <h1> flox </h1> */}
+                <img src={FloxLogo} alt="" className="BlueBirds" />
             </div>
             <div className="body"> 
                 <p> Find new people </p>
